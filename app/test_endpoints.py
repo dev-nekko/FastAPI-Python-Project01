@@ -12,7 +12,7 @@ def test_get_home():
 
 
 def test_post_home():
-    response = client.get("/")
+    response = client.post("/")
     assert response.status_code == 200
     assert "application/json" in response.headers['content-type']
     assert response.json() == {"hello": "world"}
